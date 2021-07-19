@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="jumbotton">
+    <h1 class="display-4">Newspaper app</h1>
+    <p class="lead">A Newspaper website built with Django.</p>
+    
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">
+            View All Articles</a>
+
+        </p>
+</div>
+<marquee direction="right" hight ="100" , widht="200" bgcolor ="green" loop=""><font Size ="5">Today Article</font></marquee>
+<div class="container">
+{% load static %}
+<img class="img-fluid lazy" src="{% static 'img/modiji.jpg' %}" alt ="photo"/>
+<img class ="img-fluid lazy" src="{% static 'img/rahulgandhi.jpg' %}" alt ="photo"/>
+
+
+<!--{% if Article.mainphoto %}
+<img src="{{ article_list.mainphoto.url }}"/>  
+-->
+
+    <!--{% endif %}-->
+
+</div>
+{% endblock content %}
